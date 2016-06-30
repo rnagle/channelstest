@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h2>Task queue</h2>
+
+<div class="task-queue">
+</div>
+
+<ul>
+  <li><a href="#" class="task sleep-5000">Start task that sleeps 5 seconds, then completes</a></li>
+  <li><a href="#" class="task sleep-2500">Start task that sleeps 2.5 seconds, then completes</a></li>
+</ul>
+
+<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+{% endblock %}

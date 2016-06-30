@@ -1,0 +1,5 @@
+web: daphne channelstest.asgi:channel_layer --port $PORT --bind 0.0.0.0
+http: python manage.py runworker --only-channels http.*
+websocket: python manage.py runworker --only-channels websocket.*
+websocket_alt: python manage.py runworker --only-channels websocket.*
+redis: redis-server
